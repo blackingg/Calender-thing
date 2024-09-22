@@ -347,7 +347,7 @@ const SubscriptionCalendar = () => {
           <div className="flex justify-center w-full">
             <CardHeader className="flex md:w-[55%] lg:w-[60%] justify-between items-center p-4 z-30">
               <h2
-                className={`text-3xl font-bold ${
+                className={`text-2xl lg:text-3xl font-bold ${
                   isDarkTheme ? "text-white" : "text-gray-800"
                 }`}
               >
