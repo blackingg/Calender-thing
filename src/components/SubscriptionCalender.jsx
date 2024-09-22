@@ -198,8 +198,8 @@ const SubscriptionCalendar = () => {
       transition={{ duration: 0.3 }}
       className={`mt-4 w-full p-5 rounded-md md:h-auto h-[500px] overflow-auto ${
         isDarkTheme
-          ? "bg-[#000000] opacity-30 text-white"
-          : "bg-white opacity-30 text-gray-800"
+          ? "bg-[#000000] bg-opacity-30 text-white"
+          : "bg-[#cecece] bg-opacity-30 text-gray-800"
       }`}
     >
       <div className="flex flex-col md:flex-row w-full">
