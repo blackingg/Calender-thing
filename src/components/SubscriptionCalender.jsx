@@ -32,18 +32,18 @@ const subscriptions = [
 const weekdays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
 const months = [
-  "JAN",
-  "FEB",
-  "MAR",
-  "APR",
+  "JANUARY",
+  "FEBUARY",
+  "MARCH",
+  "APRIL",
   "MAY",
-  "JUN",
-  "JUL",
-  "AUG",
-  "SEP",
-  "OCT",
-  "NOV",
-  "DEC",
+  "JUNE",
+  "JULY",
+  "AUGUST",
+  "SEPTEMBER",
+  "OCTOBER",
+  "NOVEMBER",
+  "DECEMBER",
 ];
 
 const SubscriptionRing = ({ subscriptions, isDarkTheme }) => {
@@ -256,7 +256,7 @@ const SubscriptionCalendar = () => {
             />
           )}
         </motion.div>
-        <div className="hidden lg:flex absolute right-0 bottom-0 flex-col justify-center mb-4 cursor-pointer">
+        <div className="hidden lg:flex absolute right-1 bottom-0 flex-col justify-center mb-4 cursor-pointer">
           {months.map((month, index) => {
             const scale =
               1 + Math.max(0, 0.1 - Math.abs(currentMonth - index) * 0.03);
@@ -273,7 +273,7 @@ const SubscriptionCalendar = () => {
                 key={month}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className={`mx-1 px-4 py-2 text-xl font-bold transition-all Z-50 duration-700`}
+                className={`mx-1 px-4 py-2 text-base font-bold transition-all Z-50 duration-700`}
                 style={{ transform: `scale(${scale})`, color }}
                 onClick={() => setCurrentMonth(index)}
               >
@@ -327,7 +327,7 @@ const SubscriptionCalendar = () => {
                       key={month}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className={`mx-1 px-2 py-1 text-xl font-bold transition-all Z-50 duration-700`}
+                      className={`mx-1 px-2 py-1 text-base font-bold transition-all Z-50 duration-700`}
                       style={{ transform: `scale(${scale})`, color }}
                       onClick={() => setCurrentMonth(index)}
                     >
@@ -436,7 +436,7 @@ const SubscriptionCalendar = () => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <h3 className="text-lg font-bold mb-2">
-                  Subscriptions for {months[currentMonth]} {selectedDay}
+                  {months[currentMonth]} {selectedDay}
                 </h3>
                 {subscriptions.filter((sub) => sub.day === selectedDay).length >
                 0 ? (
